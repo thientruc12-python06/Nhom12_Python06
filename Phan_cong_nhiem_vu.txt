@@ -3,10 +3,7 @@
 Nhóm: 4 thành viên
 Công nghệ: Python OOP, Tkinter, JSON/CSV, GitHub
 
-
-============================================================
 1. MỤC TIÊU VÀ PHẠM VI
-============================================================
 
 Quản lý học viên, khóa học, lớp học, giáo viên, đăng ký lớp, học phí,
 công nợ và kết quả học tập.
@@ -29,10 +26,7 @@ Chức năng nâng cao:
 - Custom GradeBadge.
 - Xuất chứng nhận.
 
-
-============================================================
 2. PHÂN CÔNG CHI TIẾT
-============================================================
 
 THÀNH VIÊN 1 – NHÓM TRƯỞNG: HỌC VIÊN VÀ ĐĂNG KÝ LỚP
 
@@ -55,9 +49,6 @@ Công việc:
 - Có dữ liệu mẫu.
 - Có ít nhất 3 ca kiểm thử.
 - Commit lên GitHub phần công việc được giao.
-
-
-------------------------------------------------------------
 
 THÀNH VIÊN 2 – KHÓA HỌC, LỚP HỌC VÀ GIÁO VIÊN
 
@@ -82,8 +73,6 @@ Công việc:
 - Commit lên GitHub phần công việc được giao.
 
 
-------------------------------------------------------------
-
 THÀNH VIÊN 3 – HỌC PHÍ VÀ ĐIỂM
 
 File phụ trách:
@@ -106,8 +95,6 @@ Công việc:
 - Có ít nhất 3 ca kiểm thử.
 - Commit lên GitHub phần công việc được giao.
 
-
-------------------------------------------------------------
 
 THÀNH VIÊN 4 – GIAO DIỆN, THỐNG KÊ VÀ CHỨNG NHẬN
 
@@ -135,10 +122,7 @@ Công việc:
 - Có ít nhất 3 ca kiểm thử.
 - Commit lên GitHub phần công việc được giao.
 
-
-============================================================
 3. QUY TẮC DỮ LIỆU VÀ PHỐI HỢP
-============================================================
 
 1. Mỗi đối tượng có một mã duy nhất; liên kết qua các trường:
    ma_hoc_vien, ma_khoa_hoc, ma_lop, ma_dang_ky.
@@ -157,10 +141,7 @@ Công việc:
 6. DateEntry có thể sử dụng thư viện tkcalendar. Cần ghi rõ thư viện
    trong requirements.txt và hướng dẫn cài đặt.
 
-
-============================================================
 4. HỒ SƠ NỘP VÀ KIỂM THỬ
-============================================================
 
 Hồ sơ cần nộp:
 - Ứng dụng Tkinter chạy ổn định.
@@ -175,10 +156,8 @@ Hồ sơ cần nộp:
 - requirements.txt.
 - Lịch sử commit của cả 4 thành viên.
 
-
-============================================================
 5. BẢNG THEO DÕI TIẾN ĐỘ
-============================================================
+
 
 Thành viên 1:
 - Module: Nhóm trưởng – Học viên và đăng ký lớp.
@@ -200,7 +179,3 @@ Thành viên 4:
 - Commit/PR: Chưa cập nhật.
 - Trạng thái: Bắt đầu.
 
-
-LƯU Ý:
-- Cập nhật họ tên và MSSV của từng thành viên khi nhóm thống nhất.
-- Cập nhật trạng thái, commit hoặc Pull Request trong quá trình thực hiện.
