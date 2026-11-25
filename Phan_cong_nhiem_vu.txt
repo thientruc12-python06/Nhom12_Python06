@@ -28,10 +28,10 @@ Chức năng nâng cao:
 
 2. PHÂN CÔNG CHI TIẾT
 
-THÀNH VIÊN 1 – NHÓM TRƯỞNG: HỌC VIÊN VÀ ĐĂNG KÝ LỚP
+THÀNH VIÊN 1 – Đặng Thị Thiên Trúc: NHÓM TRƯỞNG: HỌC VIÊN VÀ ĐĂNG KÝ LỚP
 
 File phụ trách:
-- models/hoc_vien.py
+- models/person.py
 - models/dang_ky.py
 - services/quan_ly_hoc_vien.py
 
@@ -50,12 +50,12 @@ Công việc:
 - Có ít nhất 3 ca kiểm thử.
 - Commit lên GitHub phần công việc được giao.
 
-THÀNH VIÊN 2 – KHÓA HỌC, LỚP HỌC VÀ GIÁO VIÊN
+THÀNH VIÊN 2 – Hồ Kim Nhớ: KHÓA HỌC, LỚP HỌC VÀ GIÁO VIÊN
 
 File phụ trách:
 - models/khoa_hoc.py
 - models/lop_hoc.py
-- models/giao_vien.py
+- models/person.py
 
 Công việc:
 - Quản lý mã khóa học, tên khóa học, trình độ, thời lượng và học phí.
@@ -73,7 +73,7 @@ Công việc:
 - Commit lên GitHub phần công việc được giao.
 
 
-THÀNH VIÊN 3 – HỌC PHÍ VÀ ĐIỂM
+THÀNH VIÊN 3 – Trần Tấn Phát: HỌC PHÍ VÀ ĐIỂM
 
 File phụ trách:
 - models/hoc_phi.py
@@ -96,7 +96,7 @@ Công việc:
 - Commit lên GitHub phần công việc được giao.
 
 
-THÀNH VIÊN 4 – GIAO DIỆN, THỐNG KÊ VÀ CHỨNG NHẬN
+THÀNH VIÊN 4 – Lương Tuấn Sang: GIAO DIỆN, THỐNG KÊ VÀ CHỨNG NHẬN
 
 File phụ trách:
 - gui/app.py
