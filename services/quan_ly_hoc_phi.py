@@ -9,3 +9,4 @@ class HocPhiMixin:
         """Danh sách đăng ký còn nợ học phí, nợ nhiều xếp trước."""
         ds = [dk for dk in self.dang_ky.values() if dk.cong_no > 0]
         return sorted(ds, key=lambda dk: dk.cong_no, reverse=True)
+        
