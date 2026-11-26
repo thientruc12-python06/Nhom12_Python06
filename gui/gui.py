@@ -1,4 +1,3 @@
-"""Giao diện Tkinter: Notebook gồm các tab; CrudTab là lớp cơ sở dùng chung (kế thừa + đa hình)."""
 import os
 import tkinter as tk
 from datetime import date
@@ -34,8 +33,7 @@ class Truong:
 
 
 class CrudTab(ttk.Frame):
-    """Tab CRUD tổng quát: bảng Treeview bên trái, form + nút bên phải.
-    Lớp con ghi đè các phương thức lay_dong, nap_form, tao_doi_tuong, them, cap_nhat, xoa, ma_moi."""
+    
     TIEU_DE_FORM = "Thông tin"
 
     def __init__(self, master, app, cot, truong):
@@ -90,7 +88,7 @@ class CrudTab(ttk.Frame):
         self.khung_phu.grid(row=len(truong) + 1, column=0, columnspan=2, pady=(8, 0))
         self.lam_trong()
 
-    # ------------------------------------------------ đọc/ghi giá trị form
+    # đọc/ghi giá trị form
     def doc_form(self):
         ket_qua = {t.khoa: (self.o_nhap[t.khoa].get() if t.kieu == "date" else self.bien[t.khoa].get().strip())
                    for t in self.truong}
@@ -133,7 +131,7 @@ class CrudTab(ttk.Frame):
         if dang_chon and self.tree.exists(dang_chon[0]):
             self.tree.selection_set(dang_chon[0])
 
-    # --------------------------------------------------------- hành động
+    # hành động
     def _them(self):
         def tac_vu():
             doi_tuong = self.tao_doi_tuong(self.doc_form(), self.ma_moi())
@@ -163,7 +161,7 @@ class CrudTab(ttk.Frame):
             return f"Đã xóa {sel[0]}"
         self.app.thuc_hien(tac_vu)
 
-    # ---------------------------------------- các hook cho lớp con ghi đè
+    # các hook cho lớp con ghi đè
     def cap_nhat_combo(self):
         pass
 
