@@ -1,181 +1,37 @@
-ĐỀ TÀI 21: HỆ THỐNG QUẢN LÝ TRUNG TÂM NGOẠI NGỮ
+Đề tài 21: HỆ THỐNG QUẢN LÝ TRUNG TÂM NGOẠI NGỮ
+Nhóm: 4 thành viên | Công nghệ: Python OOP, Tkinter, JSON/CSV, GitHub
+1. Mục tiêu và phạm vi
+Quản lý học viên, khóa học, lớp học, giáo viên, đăng ký lớp, học phí, công nợ và kết quả học tập. Chức năng bắt buộc: CRUD học viên/khóa/lớp; kiểm tra sĩ số khi đăng ký; thu học phí; nhập điểm và xếp loại; thống kê lớp và doanh thu. Giao diện có Notebook, Treeview, DateEntry, Canvas biểu đồ điểm. Nâng cao: kế thừa loại khóa, Custom GradeBadge, xuất chứng nhận.
+2. Phân công chi tiết
+Đặng Thị Thiên Trúc – Nhóm trưởng: Học viên và đăng ký lớp
+File phụ trách: models.py (Person, HocVien); services.py (nhóm hàm học viên, đăng ký lớp); storage.py (nhập/xuất CSV học viên)
+Công việc: Quản lý mã học viên, họ tên, ngày sinh, số điện thoại, email; kiểm tra dữ liệu bằng property (SĐT 10 chữ số, ngày sinh không ở tương lai, email đúng dạng); thêm/sửa/xóa/tìm kiếm; dang_ky_lop() và huy_dang_ky(): kiểm tra trùng đăng ký, sĩ số tối đa (LopDayError), chặn xóa học viên đã có đăng ký; nhập/xuất CSV học viên, báo lỗi theo số dòng; điều phối tích hợp, quản lý repository GitHub, tổng hợp báo cáo cuối.
+Đầu ra: code chạy được, dữ liệu mẫu, ít nhất 3 ca kiểm thử (viết trong tests/test_trung_tam.py), commit GitHub phần được giao.
+Hồ Kim Nhớ – Khóa học, lớp học và giáo viên
+File phụ trách: models.py (KhoaHoc, KhoaCoBan, KhoaGiaoTiep, KhoaLuyenThi, LopHoc, GiaoVien); services.py (nhóm hàm khóa, lớp, giáo viên); exceptions.py
+Công việc: Quản lý mã khóa, tên, số buổi, học phí cơ bản; lớp học gồm khóa, giáo viên, lịch học, ngày khai giảng, sĩ số tối đa; hồ sơ giáo viên (chuyên môn, lương giờ); CRUD khóa và lớp; lớp trừu tượng KhoaHoc và 3 lớp con ghi đè tinh_hoc_phi() (đa hình); kiểm tra trùng mã, dữ liệu không hợp lệ, không giảm sĩ số tối đa dưới sĩ số hiện có, không xóa khóa/giáo viên đang được dùng; xây dựng hệ thống ngoại lệ TrungTamError và các lớp con.
+Đầu ra: code chạy được, dữ liệu mẫu, ít nhất 3 ca kiểm thử (viết trong tests/test_trung_tam.py), commit GitHub phần được giao.
+Trần Tấn Phát – Học phí và điểm
+File phụ trách: models.py (DangKy: thanh toán, điểm); services.py (thu_hoc_phi, nhap_diem, danh_sach_cong_no, phan_bo_xep_loai); utils.py; storage.py (đọc/ghi JSON); tao_du_lieu_mau.py
+Công việc: Quản lý học phí chốt tại thời điểm đăng ký, giảm giá, các đợt thanh toán, công nợ = phải đóng − đã đóng; không cho số tiền âm, không phải số hoặc đóng vượt công nợ; nhập điểm giữa kỳ và cuối kỳ, kiểm tra thang 0–10, tổng kết = 40% giữa kỳ + 60% cuối kỳ, xếp loại Giỏi ≥ 8, Khá ≥ 6.5, Trung bình ≥ 5, Yếu < 5; hàm tiện ích chuyen_so, phan_loai_diem; lưu/nạp JSON an toàn (ghi file tạm, sao lưu .bak, bỏ qua bản ghi lỗi và ghi error.log); sinh dữ liệu mẫu bằng random và sys.argv.
+Đầu ra: code chạy được, dữ liệu mẫu, ít nhất 3 ca kiểm thử (viết trong tests/test_trung_tam.py), commit GitHub phần được giao.
+Lương Tuấn Sang – Giao diện, thống kê, chứng nhận
+File phụ trách: gui.py; widgets.py (DateEntry, GradeBadge, BieuDoCot); main.py; services.py (thong_ke_lop, doanh_thu_theo_khoa, tong_quan, xuat_chung_nhan)
+Công việc: Tạo ttk.Notebook 7 tab, Treeview danh sách, DateEntry chọn ngày, Canvas biểu đồ điểm; lớp cơ sở CrudTab cho 4 tab danh mục; kết nối các service, bắt TrungTamError để hiện hộp thoại, tự động lưu sau mỗi thao tác; thống kê số lớp, số học viên, doanh thu thực thu, tổng công nợ; Custom GradeBadge hiển thị xếp loại; xuất chứng nhận HTML cho học viên điểm ≥ 5 và hết nợ; kiểm tra chạy toàn ứng dụng, chụp ảnh màn hình, viết hướng dẫn sử dụng.
+Đầu ra: code chạy được, dữ liệu mẫu, ít nhất 3 ca kiểm thử (viết trong tests/test_trung_tam.py), commit GitHub phần được giao.
+3. Quy tắc dữ liệu và phối hợp
+Mỗi đối tượng có mã duy nhất, tự sinh theo tiền tố (HV001, GV001, KH001, L001, DK0001); liên kết qua ma_hv, ma_khoa, ma_gv, ma_lop, ma_dk; thống nhất tên trường trước khi code.
+Lưu dữ liệu bằng JSON/CSV; không xóa dữ liệu thật khi chạy demo; có dữ liệu mẫu và xử lý trường hợp file rỗng/chưa tồn tại.
+Sĩ số hiện tại = số đăng ký còn hiệu lực; doanh thu = tổng số tiền thực nhận, không phải tổng học phí phải thu.
+Các class model không phụ thuộc Tkinter; phần giao diện gọi service để thao tác.
+DateEntry tự xây dựng bằng thư viện chuẩn, không cần cài thêm tkcalendar; dự án chỉ dùng thư viện chuẩn Python 3.8 trở lên (Linux cần cài python3-tk).
+Mỗi thành viên làm việc trên nhánh riêng, mở Pull Request để nhóm trưởng xem xét trước khi gộp vào nhánh main; commit message nêu rõ phần việc; không commit __pycache__, *.bak, error.log (đã có .gitignore).
 
-Nhóm: 4 thành viên
-Công nghệ: Python OOP, Tkinter, JSON/CSV, GitHub
-
-1. MỤC TIÊU VÀ PHẠM VI
-
-Quản lý học viên, khóa học, lớp học, giáo viên, đăng ký lớp, học phí,
-công nợ và kết quả học tập.
-
-Chức năng bắt buộc:
-- Thêm, xem, sửa, xóa (CRUD) học viên, khóa học và lớp học.
-- Kiểm tra sĩ số khi đăng ký lớp.
-- Thu học phí.
-- Nhập điểm và xếp loại.
-- Thống kê lớp học và doanh thu.
-
-Giao diện:
-- Notebook.
-- Treeview.
-- DateEntry.
-- Canvas biểu đồ điểm.
-
-Chức năng nâng cao:
-- Kế thừa các loại khóa học.
-- Custom GradeBadge.
-- Xuất chứng nhận.
-
-2. PHÂN CÔNG CHI TIẾT
-
-THÀNH VIÊN 1 – Đặng Thị Thiên Trúc: NHÓM TRƯỞNG: HỌC VIÊN VÀ ĐĂNG KÝ LỚP
-
-File phụ trách:
-- models/person.py
-- models/dang_ky.py
-- services/quan_ly_hoc_vien.py
-
-Công việc:
-- Quản lý mã học viên, họ tên, ngày sinh, giới tính (nếu dùng),
-  số điện thoại, email và địa chỉ.
-- Thêm, sửa, xóa và tìm kiếm học viên.
-- Đăng ký và hủy đăng ký lớp.
-- Kiểm tra trùng đăng ký và sĩ số tối đa.
-- Lưu và đọc dữ liệu JSON.
-- Điều phối tích hợp và tổng hợp báo cáo.
-
-Đầu ra:
-- Code chạy được.
-- Có dữ liệu mẫu.
-- Có ít nhất 3 ca kiểm thử.
-- Commit lên GitHub phần công việc được giao.
-
-THÀNH VIÊN 2 – Hồ Kim Nhớ: KHÓA HỌC, LỚP HỌC VÀ GIÁO VIÊN
-
-File phụ trách:
-- models/khoa_hoc.py
-- models/lop_hoc.py
-- models/person.py
-
-Công việc:
-- Quản lý mã khóa học, tên khóa học, trình độ, thời lượng và học phí.
-- Quản lý mã lớp, khóa học, giáo viên, lịch học,
-  ngày bắt đầu/kết thúc và sĩ số tối đa.
-- Quản lý hồ sơ và phân công giáo viên.
-- Thực hiện CRUD khóa học và lớp học.
-- Xây dựng kế thừa KhoaHocOnline/KhoaHocOffline.
-- Kiểm tra trùng mã và dữ liệu không hợp lệ.
-
-Đầu ra:
-- Code chạy được.
-- Có dữ liệu mẫu.
-- Có ít nhất 3 ca kiểm thử.
-- Commit lên GitHub phần công việc được giao.
-
-
-THÀNH VIÊN 3 – Trần Tấn Phát: HỌC PHÍ VÀ ĐIỂM
-
-File phụ trách:
-- models/hoc_phi.py
-- models/ket_qua.py
-- services/quan_ly_hoc_phi.py
-
-Công việc:
-- Quản lý mã phiếu, mã học viên, mã đăng ký.
-- Theo dõi số tiền phải đóng, đã đóng, còn nợ và ngày thanh toán.
-- Không cho phép số tiền âm hoặc đóng vượt số tiền phải thu.
-- Nhập điểm và kiểm tra điểm trong khoảng 0–10.
-- Tính điểm trung bình.
-- Xếp loại theo ngưỡng do nhóm thống nhất.
-- Lưu dữ liệu JSON/CSV.
-
-Đầu ra:
-- Code chạy được.
-- Có dữ liệu mẫu.
-- Có ít nhất 3 ca kiểm thử.
-- Commit lên GitHub phần công việc được giao.
-
-
-THÀNH VIÊN 4 – Lương Tuấn Sang: GIAO DIỆN, THỐNG KÊ VÀ CHỨNG NHẬN
-
-File phụ trách:
-- gui/app.py
-- gui/grade_badge.py
-- gui/chung_nhan.py
-- services/thong_ke.py
-- main.py
-
-Công việc:
-- Tạo Notebook gồm các tab chức năng.
-- Tạo Treeview hiển thị danh sách.
-- Sử dụng DateEntry để chọn ngày.
-- Sử dụng Canvas để hiển thị biểu đồ điểm.
-- Kết nối giao diện với các service.
-- Thống kê số lớp, số học viên, doanh thu thực thu và tổng công nợ.
-- Tạo Custom GradeBadge để hiển thị xếp loại.
-- Xuất chứng nhận cho học viên đạt điều kiện.
-- Kiểm tra khả năng chạy của toàn bộ ứng dụng.
-
-Đầu ra:
-- Code chạy được.
-- Có dữ liệu mẫu.
-- Có ít nhất 3 ca kiểm thử.
-- Commit lên GitHub phần công việc được giao.
-
-3. QUY TẮC DỮ LIỆU VÀ PHỐI HỢP
-
-1. Mỗi đối tượng có một mã duy nhất; liên kết qua các trường:
-   ma_hoc_vien, ma_khoa_hoc, ma_lop, ma_dang_ky.
-   Cần thống nhất tên trường trước khi lập trình.
-
-2. Lưu dữ liệu bằng JSON/CSV; không xóa dữ liệu thật khi chạy demo.
-   Cần có dữ liệu mẫu và xử lý trường hợp file rỗng/chưa tồn tại.
-
-3. Sĩ số hiện tại = số đăng ký còn hiệu lực.
-
-4. Doanh thu = tổng số tiền thực nhận, không phải tổng học phí phải thu.
-
-5. Các class model không phụ thuộc Tkinter; phần giao diện gọi service
-   để thao tác.
-
-6. DateEntry có thể sử dụng thư viện tkcalendar. Cần ghi rõ thư viện
-   trong requirements.txt và hướng dẫn cài đặt.
-
-4. HỒ SƠ NỘP VÀ KIỂM THỬ
-
-Hồ sơ cần nộp:
-- Ứng dụng Tkinter chạy ổn định.
-- Dữ liệu JSON/CSV mẫu.
-- Báo cáo phân tích yêu cầu.
-- Sơ đồ/thiết kế class.
-- Mô tả giao diện.
-- Bảng kiểm thử.
-- Ảnh minh họa.
-- Hướng dẫn sử dụng.
-- README.md.
-- requirements.txt.
-- Lịch sử commit của cả 4 thành viên.
-
-5. BẢNG THEO DÕI TIẾN ĐỘ
-
-
-Thành viên 1:
-- Module: Nhóm trưởng – Học viên và đăng ký lớp.
-- Commit/PR: Chưa cập nhật.
-- Trạng thái: Bắt đầu.
-
-Thành viên 2:
-- Module: Khóa học, lớp học và giáo viên.
-- Commit/PR: Chưa cập nhật.
-- Trạng thái: Bắt đầu.
-
-Thành viên 3:
-- Module: Học phí và điểm.
-- Commit/PR: Chưa cập nhật.
-- Trạng thái: Bắt đầu.
-
-Thành viên 4:
-- Module: Giao diện, thống kê và chứng nhận.
-- Commit/PR: Chưa cập nhật.
-- Trạng thái: Bắt đầu.
-
+4. Hồ sơ nộp và kiểm thử
+Ứng dụng Tkinter chạy ổn định; dữ liệu JSON/CSV mẫu; báo cáo phân tích yêu cầu, sơ đồ/thiết kế class, mô tả giao diện, bảng kiểm thử, ảnh minh họa và hướng dẫn sử dụng; README.md; lịch sử commit của cả 4 thành viên. Kiểm thử tự động chạy bằng lệnh python -m unittest discover -s tests -v.
+5. Bảng theo dõi tiến độ
+Thành viên	Module	Commit/PR	Trạng thái
+Đặng Thị Thiên Trúc	Nhóm trưởng: Học viên và đăng ký lớp - Chưa cập nhật - Đang thực hiện
+Hồ Kim Nhớ	Khóa học, lớp học và giáo viên -	Chưa cập nhật -	Đang thực hiện
+Trần Tấn Phát	Học phí và điểm -	Chưa cập nhật -	Đang thực hiện
+Lương Tuấn Sang	Giao diện, thống kê, chứng nhận -	Chưa cập nhật -	Đang thực hiện
