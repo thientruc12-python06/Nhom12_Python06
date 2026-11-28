@@ -1,0 +1,677 @@
+{
+  "hoc_vien": [
+    {
+      "ma": "HV001",
+      "ho_ten": "Phan Thị Mai",
+      "ngay_sinh": "04/01/1997",
+      "sdt": "0988447294",
+      "email": "hv001@mail.com"
+    },
+    {
+      "ma": "HV002",
+      "ho_ten": "Nguyễn Hoàng Nam",
+      "ngay_sinh": "05/05/2005",
+      "sdt": "0971698716",
+      "email": "hv002@mail.com"
+    },
+    {
+      "ma": "HV003",
+      "ho_ten": "Phan Gia Phúc",
+      "ngay_sinh": "07/10/2006",
+      "sdt": "0936978809",
+      "email": "hv003@mail.com"
+    },
+    {
+      "ma": "HV004",
+      "ho_ten": "Phạm Minh Bình",
+      "ngay_sinh": "21/10/2010",
+      "sdt": "0981967273",
+      "email": "hv004@mail.com"
+    },
+    {
+      "ma": "HV005",
+      "ho_ten": "Trần Gia Trang",
+      "ngay_sinh": "28/03/2007",
+      "sdt": "0938648876",
+      "email": "hv005@mail.com"
+    },
+    {
+      "ma": "HV006",
+      "ho_ten": "Đặng Ngọc Linh",
+      "ngay_sinh": "12/01/2001",
+      "sdt": "0900297875",
+      "email": "hv006@mail.com"
+    },
+    {
+      "ma": "HV007",
+      "ho_ten": "Phạm Thanh Trang",
+      "ngay_sinh": "19/06/2005",
+      "sdt": "0987680457",
+      "email": "hv007@mail.com"
+    },
+    {
+      "ma": "HV008",
+      "ho_ten": "Trần Gia Tú",
+      "ngay_sinh": "21/10/2000",
+      "sdt": "0972671475",
+      "email": "hv008@mail.com"
+    },
+    {
+      "ma": "HV009",
+      "ho_ten": "Trần Ngọc Quân",
+      "ngay_sinh": "13/04/1998",
+      "sdt": "0970107981",
+      "email": "hv009@mail.com"
+    },
+    {
+      "ma": "HV010",
+      "ho_ten": "Đỗ Ngọc Khoa",
+      "ngay_sinh": "16/09/1997",
+      "sdt": "0980845205",
+      "email": "hv010@mail.com"
+    },
+    {
+      "ma": "HV011",
+      "ho_ten": "Đỗ Gia Giang",
+      "ngay_sinh": "30/03/2007",
+      "sdt": "0917929841",
+      "email": "hv011@mail.com"
+    },
+    {
+      "ma": "HV012",
+      "ho_ten": "Đặng Minh Giang",
+      "ngay_sinh": "22/02/2008",
+      "sdt": "0938662836",
+      "email": "hv012@mail.com"
+    },
+    {
+      "ma": "HV013",
+      "ho_ten": "Nguyễn Thị Phúc",
+      "ngay_sinh": "24/08/1996",
+      "sdt": "0905500875",
+      "email": "hv013@mail.com"
+    },
+    {
+      "ma": "HV014",
+      "ho_ten": "Huỳnh Gia Mai",
+      "ngay_sinh": "21/09/1997",
+      "sdt": "0977992298",
+      "email": "hv014@mail.com"
+    },
+    {
+      "ma": "HV015",
+      "ho_ten": "Phạm Quốc Lộc",
+      "ngay_sinh": "18/07/2002",
+      "sdt": "0979318603",
+      "email": "hv015@mail.com"
+    },
+    {
+      "ma": "HV016",
+      "ho_ten": "Lê Văn Vy",
+      "ngay_sinh": "30/01/1996",
+      "sdt": "0973702838",
+      "email": "hv016@mail.com"
+    },
+    {
+      "ma": "HV017",
+      "ho_ten": "Lê Minh Hà",
+      "ngay_sinh": "30/09/2003",
+      "sdt": "0936861642",
+      "email": "hv017@mail.com"
+    },
+    {
+      "ma": "HV018",
+      "ho_ten": "Võ Minh Lan",
+      "ngay_sinh": "28/05/2005",
+      "sdt": "0976472587",
+      "email": "hv018@mail.com"
+    },
+    {
+      "ma": "HV019",
+      "ho_ten": "Bùi Thị Tú",
+      "ngay_sinh": "08/10/2006",
+      "sdt": "0931330175",
+      "email": "hv019@mail.com"
+    },
+    {
+      "ma": "HV020",
+      "ho_ten": "Đặng Minh An",
+      "ngay_sinh": "23/11/2002",
+      "sdt": "0915898319",
+      "email": "hv020@mail.com"
+    },
+    {
+      "ma": "HV021",
+      "ho_ten": "Huỳnh Ngọc Yến",
+      "ngay_sinh": "11/08/2001",
+      "sdt": "0984821416",
+      "email": "hv021@mail.com"
+    },
+    {
+      "ma": "HV022",
+      "ho_ten": "Lê Thị Bình",
+      "ngay_sinh": "28/12/2002",
+      "sdt": "0911854914",
+      "email": "hv022@mail.com"
+    },
+    {
+      "ma": "HV023",
+      "ho_ten": "Võ Minh Lan",
+      "ngay_sinh": "29/09/2000",
+      "sdt": "0900646001",
+      "email": "hv023@mail.com"
+    },
+    {
+      "ma": "HV024",
+      "ho_ten": "Phạm Văn Linh",
+      "ngay_sinh": "04/10/1997",
+      "sdt": "0908955799",
+      "email": "hv024@mail.com"
+    }
+  ],
+  "giao_vien": [
+    {
+      "ma": "GV001",
+      "ho_ten": "Trần Mỹ Linh",
+      "ngay_sinh": "03/05/1983",
+      "sdt": "0938813998",
+      "email": "gv1@trungtam.vn",
+      "chuyen_mon": "IELTS",
+      "luong_gio": 250000.0
+    },
+    {
+      "ma": "GV002",
+      "ho_ten": "Lê Hoàng Nam",
+      "ngay_sinh": "14/10/1990",
+      "sdt": "0988797309",
+      "email": "gv2@trungtam.vn",
+      "chuyen_mon": "Giao tiếp",
+      "luong_gio": 200000.0
+    },
+    {
+      "ma": "GV003",
+      "ho_ten": "Nguyễn Thu Hà",
+      "ngay_sinh": "30/03/1983",
+      "sdt": "0931707536",
+      "email": "gv3@trungtam.vn",
+      "chuyen_mon": "TOEIC",
+      "luong_gio": 250000.0
+    }
+  ],
+  "khoa_hoc": [
+    {
+      "loai": "Cơ bản",
+      "ma": "KH001",
+      "ten": "Tiếng Anh nền tảng A1",
+      "so_buoi": 36,
+      "hoc_phi_co_ban": 3600000.0
+    },
+    {
+      "loai": "Cơ bản",
+      "ma": "KH002",
+      "ten": "Tiếng Anh sơ cấp A2",
+      "so_buoi": 40,
+      "hoc_phi_co_ban": 4200000.0
+    },
+    {
+      "loai": "Giao tiếp",
+      "ma": "KH003",
+      "ten": "Giao tiếp công sở",
+      "so_buoi": 30,
+      "hoc_phi_co_ban": 3800000.0,
+      "phu_phi_tai_lieu": 400000.0
+    },
+    {
+      "loai": "Luyện thi",
+      "ma": "KH004",
+      "ten": "Luyện thi IELTS 6.5",
+      "so_buoi": 48,
+      "hoc_phi_co_ban": 5000000.0,
+      "chung_chi": "IELTS",
+      "phi_thi_thu": 600000.0
+    },
+    {
+      "loai": "Luyện thi",
+      "ma": "KH005",
+      "ten": "Luyện thi TOEIC 700+",
+      "so_buoi": 40,
+      "hoc_phi_co_ban": 4500000.0,
+      "chung_chi": "TOEIC",
+      "phi_thi_thu": 450000.0
+    }
+  ],
+  "lop_hoc": [
+    {
+      "ma": "L001",
+      "ten": "A1 - Sáng T2/T4",
+      "ma_khoa": "KH001",
+      "ma_gv": "GV002",
+      "si_so_toi_da": 8,
+      "ngay_khai_giang": "01/10/2026",
+      "lich_hoc": "Thứ 2, 4 (8:00-10:00)"
+    },
+    {
+      "ma": "L002",
+      "ten": "A2 - Tối T3/T5",
+      "ma_khoa": "KH002",
+      "ma_gv": "GV002",
+      "si_so_toi_da": 10,
+      "ngay_khai_giang": "25/08/2026",
+      "lich_hoc": "Thứ 3, 5 (18:30-20:30)"
+    },
+    {
+      "ma": "L003",
+      "ten": "Giao tiếp - Cuối tuần",
+      "ma_khoa": "KH003",
+      "ma_gv": "GV003",
+      "si_so_toi_da": 8,
+      "ngay_khai_giang": "01/10/2026",
+      "lich_hoc": "Thứ 7, CN (9:00-11:00)"
+    },
+    {
+      "ma": "L004",
+      "ten": "IELTS 6.5 - Tối T2/T4/T6",
+      "ma_khoa": "KH004",
+      "ma_gv": "GV001",
+      "si_so_toi_da": 12,
+      "ngay_khai_giang": "02/09/2026",
+      "lich_hoc": "Thứ 2, 4, 6 (19:00-21:00)"
+    },
+    {
+      "ma": "L005",
+      "ten": "TOEIC 700+ - Tối T3/T5",
+      "ma_khoa": "KH005",
+      "ma_gv": "GV003",
+      "si_so_toi_da": 10,
+      "ngay_khai_giang": "29/09/2026",
+      "lich_hoc": "Thứ 3, 5 (18:30-20:30)"
+    }
+  ],
+  "dang_ky": [
+    {
+      "ma": "DK0001",
+      "ma_hv": "HV010",
+      "ma_lop": "L001",
+      "ngay_dk": "22/10/2026",
+      "hoc_phi": 3600000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 3600000.0
+        }
+      ],
+      "diem_gk": null,
+      "diem_ck": null
+    },
+    {
+      "ma": "DK0002",
+      "ma_hv": "HV003",
+      "ma_lop": "L003",
+      "ngay_dk": "10/11/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 5.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 3990000.0
+        }
+      ],
+      "diem_gk": 3.7,
+      "diem_ck": 6.9
+    },
+    {
+      "ma": "DK0003",
+      "ma_hv": "HV003",
+      "ma_lop": "L002",
+      "ngay_dk": "29/10/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 5.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 3990000.0
+        }
+      ],
+      "diem_gk": 5.8,
+      "diem_ck": 6.0
+    },
+    {
+      "ma": "DK0004",
+      "ma_hv": "HV024",
+      "ma_lop": "L004",
+      "ngay_dk": "09/11/2026",
+      "hoc_phi": 6600000.0,
+      "giam_gia": 5.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 6270000.0
+        }
+      ],
+      "diem_gk": 8.2,
+      "diem_ck": 7.0
+    },
+    {
+      "ma": "DK0005",
+      "ma_hv": "HV008",
+      "ma_lop": "L004",
+      "ngay_dk": "03/11/2026",
+      "hoc_phi": 6600000.0,
+      "giam_gia": 10.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 5940000.0
+        }
+      ],
+      "diem_gk": 6.6,
+      "diem_ck": 5.2
+    },
+    {
+      "ma": "DK0006",
+      "ma_hv": "HV008",
+      "ma_lop": "L003",
+      "ngay_dk": "12/11/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 2940000.0
+        }
+      ],
+      "diem_gk": 9.1,
+      "diem_ck": 8.9
+    },
+    {
+      "ma": "DK0007",
+      "ma_hv": "HV017",
+      "ma_lop": "L003",
+      "ngay_dk": "28/10/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 5.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 3990000.0
+        }
+      ],
+      "diem_gk": null,
+      "diem_ck": null
+    },
+    {
+      "ma": "DK0008",
+      "ma_hv": "HV023",
+      "ma_lop": "L002",
+      "ngay_dk": "03/11/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 1260000.0
+        }
+      ],
+      "diem_gk": null,
+      "diem_ck": null
+    },
+    {
+      "ma": "DK0009",
+      "ma_hv": "HV023",
+      "ma_lop": "L004",
+      "ngay_dk": "23/10/2026",
+      "hoc_phi": 6600000.0,
+      "giam_gia": 10.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 2970000.0
+        }
+      ],
+      "diem_gk": null,
+      "diem_ck": null
+    },
+    {
+      "ma": "DK0010",
+      "ma_hv": "HV019",
+      "ma_lop": "L005",
+      "ngay_dk": "27/10/2026",
+      "hoc_phi": 5850000.0,
+      "giam_gia": 10.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 2632000.0
+        }
+      ],
+      "diem_gk": 7.6,
+      "diem_ck": 7.1
+    },
+    {
+      "ma": "DK0011",
+      "ma_hv": "HV001",
+      "ma_lop": "L005",
+      "ngay_dk": "07/11/2026",
+      "hoc_phi": 5850000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 1755000.0
+        }
+      ],
+      "diem_gk": 3.5,
+      "diem_ck": 5.8
+    },
+    {
+      "ma": "DK0012",
+      "ma_hv": "HV006",
+      "ma_lop": "L004",
+      "ngay_dk": "12/11/2026",
+      "hoc_phi": 6600000.0,
+      "giam_gia": 5.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 6270000.0
+        }
+      ],
+      "diem_gk": 5.2,
+      "diem_ck": 8.1
+    },
+    {
+      "ma": "DK0013",
+      "ma_hv": "HV006",
+      "ma_lop": "L001",
+      "ngay_dk": "16/11/2026",
+      "hoc_phi": 3600000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 3600000.0
+        }
+      ],
+      "diem_gk": null,
+      "diem_ck": null
+    },
+    {
+      "ma": "DK0014",
+      "ma_hv": "HV016",
+      "ma_lop": "L005",
+      "ngay_dk": "23/10/2026",
+      "hoc_phi": 5850000.0,
+      "giam_gia": 5.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 5557500.0
+        }
+      ],
+      "diem_gk": null,
+      "diem_ck": null
+    },
+    {
+      "ma": "DK0015",
+      "ma_hv": "HV016",
+      "ma_lop": "L003",
+      "ngay_dk": "07/11/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [],
+      "diem_gk": 4.4,
+      "diem_ck": 6.0
+    },
+    {
+      "ma": "DK0016",
+      "ma_hv": "HV021",
+      "ma_lop": "L003",
+      "ngay_dk": "05/11/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 4200000.0
+        }
+      ],
+      "diem_gk": 7.0,
+      "diem_ck": 5.8
+    },
+    {
+      "ma": "DK0017",
+      "ma_hv": "HV021",
+      "ma_lop": "L005",
+      "ngay_dk": "05/11/2026",
+      "hoc_phi": 5850000.0,
+      "giam_gia": 20.0,
+      "thanh_toan": [],
+      "diem_gk": 9.0,
+      "diem_ck": 7.7
+    },
+    {
+      "ma": "DK0018",
+      "ma_hv": "HV005",
+      "ma_lop": "L003",
+      "ngay_dk": "14/10/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 10.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 3780000.0
+        }
+      ],
+      "diem_gk": 4.7,
+      "diem_ck": 7.0
+    },
+    {
+      "ma": "DK0019",
+      "ma_hv": "HV022",
+      "ma_lop": "L001",
+      "ngay_dk": "16/10/2026",
+      "hoc_phi": 3600000.0,
+      "giam_gia": 10.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 2268000.0
+        }
+      ],
+      "diem_gk": 3.5,
+      "diem_ck": 5.9
+    },
+    {
+      "ma": "DK0020",
+      "ma_hv": "HV009",
+      "ma_lop": "L003",
+      "ngay_dk": "08/11/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 4200000.0
+        }
+      ],
+      "diem_gk": 4.2,
+      "diem_ck": 5.6
+    },
+    {
+      "ma": "DK0021",
+      "ma_hv": "HV018",
+      "ma_lop": "L001",
+      "ngay_dk": "29/10/2026",
+      "hoc_phi": 3600000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 1800000.0
+        }
+      ],
+      "diem_gk": 6.7,
+      "diem_ck": 7.1
+    },
+    {
+      "ma": "DK0022",
+      "ma_hv": "HV012",
+      "ma_lop": "L003",
+      "ngay_dk": "19/10/2026",
+      "hoc_phi": 4200000.0,
+      "giam_gia": 5.0,
+      "thanh_toan": [],
+      "diem_gk": 3.9,
+      "diem_ck": 9.8
+    },
+    {
+      "ma": "DK0023",
+      "ma_hv": "HV011",
+      "ma_lop": "L005",
+      "ngay_dk": "08/11/2026",
+      "hoc_phi": 5850000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 5850000.0
+        }
+      ],
+      "diem_gk": 8.3,
+      "diem_ck": 6.3
+    },
+    {
+      "ma": "DK0024",
+      "ma_hv": "HV013",
+      "ma_lop": "L001",
+      "ngay_dk": "20/10/2026",
+      "hoc_phi": 3600000.0,
+      "giam_gia": 0.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 3600000.0
+        }
+      ],
+      "diem_gk": 5.2,
+      "diem_ck": 5.7
+    },
+    {
+      "ma": "DK0025",
+      "ma_hv": "HV002",
+      "ma_lop": "L005",
+      "ngay_dk": "31/10/2026",
+      "hoc_phi": 5850000.0,
+      "giam_gia": 10.0,
+      "thanh_toan": [
+        {
+          "ngay": "22/11/2026",
+          "so_tien": 5265000.0
+        }
+      ],
+      "diem_gk": 6.1,
+      "diem_ck": 3.6
+    }
+  ]
+}
