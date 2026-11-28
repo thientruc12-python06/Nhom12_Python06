@@ -17,7 +17,7 @@ class TrungTamService:
         self.lop_hoc = {}
         self.dang_ky = {}
 
-    # tiện ích chung
+    # ------------------------------------------------------ tiện ích chung
     @staticmethod
     def _them(kho, doi_tuong, ten):
         if doi_tuong.ma in kho:
@@ -35,7 +35,7 @@ class TrungTamService:
         self._lay(kho, doi_tuong.ma, ten)
         kho[doi_tuong.ma] = doi_tuong
 
-    # học viên
+    # ---------------------------------------------------------- học viên
     def ma_hoc_vien_moi(self):
         return ma_tiep_theo(self.hoc_vien, "HV")
 
@@ -54,7 +54,7 @@ class TrungTamService:
             raise RangBuocError("Học viên đã có đăng ký lớp, hãy hủy đăng ký trước khi xóa.")
         del self.hoc_vien[ma]
 
-    # giáo viên
+    # --------------------------------------------------------- giáo viên
     def ma_giao_vien_moi(self):
         return ma_tiep_theo(self.giao_vien, "GV")
 
@@ -73,7 +73,7 @@ class TrungTamService:
             raise RangBuocError("Giáo viên đang được phân công dạy lớp, không thể xóa.")
         del self.giao_vien[ma]
 
-    # khóa học
+    # ---------------------------------------------------------- khóa học
     def ma_khoa_moi(self):
         return ma_tiep_theo(self.khoa_hoc, "KH")
 
@@ -93,7 +93,7 @@ class TrungTamService:
             raise RangBuocError("Khóa học đã có lớp, hãy xóa các lớp trước.")
         del self.khoa_hoc[ma]
 
-    # lớp
+    # --------------------------------------------------------------- lớp
     def ma_lop_moi(self):
         return ma_tiep_theo(self.lop_hoc, "L")
 
@@ -132,7 +132,7 @@ class TrungTamService:
     def si_so(self, ma_lop):
         return len(self.dang_ky_cua_lop(ma_lop))
 
-    # đăng ký
+    # ----------------------------------------------------------- đăng ký
     def dang_ky_lop(self, ma_hv, ma_lop, giam_gia=0, ngay=None):
         """Đăng ký học viên vào lớp: kiểm tra tồn tại, trùng đăng ký và sĩ số."""
         self.lay_hoc_vien(ma_hv)
@@ -158,14 +158,14 @@ class TrungTamService:
             raise RangBuocError("Đăng ký đã có điểm, không thể hủy.")
         del self.dang_ky[ma_dk]
 
-    # học phí và điểm
+    # --------------------------------------------------- học phí và điểm
     def thu_hoc_phi(self, ma_dk, so_tien, ngay=None):
         self.lay_dang_ky(ma_dk).nop_tien(so_tien, ngay)
 
     def nhap_diem(self, ma_dk, diem_gk, diem_ck):
         self.lay_dang_ky(ma_dk).nhap_diem(diem_gk, diem_ck)
 
-    # thống kê
+    # ---------------------------------------------------------- thống kê
     @staticmethod
     def phan_bo_xep_loai(ds_dang_ky):
         dem = {nhan: 0 for nhan in NHAN_XEP_LOAI}
@@ -216,7 +216,7 @@ class TrungTamService:
             "cong_no": sum(dk.cong_no for dk in self.dang_ky.values()),
         }
 
-    # chứng nhận
+    # -------------------------------------------------------- chứng nhận
     def xuat_chung_nhan(self, ma_dk, thu_muc="chung_nhan"):
         """Xuất chứng nhận hoàn thành khóa học dạng HTML (mở bằng trình duyệt để in)."""
         dk = self.lay_dang_ky(ma_dk)
@@ -232,108 +232,24 @@ class TrungTamService:
         gv = self.lay_giao_vien(lop.ma_gv)
         e = html.escape
         noi_dung = f"""<!DOCTYPE html>
-        <html lang="vi">
-        <head>
-            <meta charset="utf-8">
-            <title>Chứng nhận {e(dk.ma)}</title>
-
-            <style>
-                body {{
-                    font-family: Georgia, serif;
-                    background: #f4f1ea;
-                    margin: 0;
-                    padding: 30px;
-                }}
-
-                .khung {{
-                    max-width: 760px;
-                    margin: auto;
-                    background: #fff;
-                    border: 10px double #8a6d3b;
-                    padding: 50px;
-                    text-align: center;
-                }}
-
-                h1 {{
-                    color: #8a6d3b;
-                    letter-spacing: 3px;
-                }}
-
-                .ten {{
-                    font-size: 34px;
-                    margin: 18px 0;
-                    color: #222;
-                }}
-
-                .phu {{
-                    color: #555;
-                    margin: 6px 0;
-                }}
-
-                .ky {{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 60px;
-                }}
-            </style>
-        </head>
-
-        <body>
-            <div class="khung">
-
-                <div class="phu">{e(TEN_TRUNG_TAM)}</div>
-
-                <h1>CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC</h1>
-
-                <p class="phu">Chứng nhận học viên</p>
-
-                <div class="ten">{e(hv.ho_ten)}</div>
-
-                <p class="phu">
-                    Mã học viên: {e(hv.ma)}
-                    &nbsp;|&nbsp;
-                    Ngày sinh: {format_date(hv.ngay_sinh)}
-                </p>
-
-                <p>
-                    đã hoàn thành khóa
-                    <b>{e(khoa.ten)}</b>
-                    ({e(khoa.LOAI)})
-                    – lớp <b>{e(lop.ten)}</b>
-                </p>
-
-                <p>
-                    Điểm tổng kết:
-                    <b>{dk.diem_tong_ket:.2f}</b>
-                    – Xếp loại:
-                    <b>{e(dk.xep_loai)}</b>
-                </p>
-
-                <div class="ky">
-
-                    <div>
-                        Giáo viên phụ trách
-                        <br><br><br>
-                        <b>{e(gv.ho_ten)}</b>
-                    </div>
-
-                    <div>
-                        TP. Hồ Chí Minh, ngày {date.today():%d/%m/%Y}
-                        <br>
-                        Giám đốc trung tâm
-                        <br><br><br>
-                    </div>
-
-                </div>
-
-                <p class="phu">
-                    Số chứng nhận: CN-{e(dk.ma)}
-                </p>
-
-            </div>
-        </body>
-        </html>
-        """
+<html lang="vi"><head><meta charset="utf-8"><title>Chứng nhận {e(dk.ma)}</title>
+<style>
+body{{font-family:Georgia,serif;background:#f4f1ea;margin:0;padding:30px}}
+.khung{{max-width:760px;margin:auto;background:#fff;border:10px double #8a6d3b;padding:50px;text-align:center}}
+h1{{color:#8a6d3b;letter-spacing:3px}} .ten{{font-size:34px;margin:18px 0;color:#222}}
+.phu{{color:#555;margin:6px 0}} .ky{{display:flex;justify-content:space-between;margin-top:60px}}
+</style></head><body><div class="khung">
+<div class="phu">{e(TEN_TRUNG_TAM)}</div>
+<h1>CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC</h1>
+<p class="phu">Chứng nhận học viên</p>
+<div class="ten">{e(hv.ho_ten)}</div>
+<p class="phu">Mã học viên: {e(hv.ma)} &nbsp;|&nbsp; Ngày sinh: {format_date(hv.ngay_sinh)}</p>
+<p>đã hoàn thành khóa <b>{e(khoa.ten)}</b> ({e(khoa.LOAI)}) – lớp <b>{e(lop.ten)}</b></p>
+<p>Điểm tổng kết: <b>{dk.diem_tong_ket:.2f}</b> – Xếp loại: <b>{e(dk.xep_loai)}</b></p>
+<div class="ky"><div>Giáo viên phụ trách<br><br><br><b>{e(gv.ho_ten)}</b></div>
+<div>TP. Hồ Chí Minh, ngày {date.today():%d/%m/%Y}<br>Giám đốc trung tâm<br><br><br></div></div>
+<p class="phu">Số chứng nhận: CN-{e(dk.ma)}</p>
+</div></body></html>"""
         try:
             os.makedirs(thu_muc, exist_ok=True)
             duong_dan = os.path.join(thu_muc, f"ChungNhan_{dk.ma}.html")
@@ -343,7 +259,7 @@ class TrungTamService:
             raise FileDuLieuError(f"Không ghi được file chứng nhận: {loi}") from loi
         return duong_dan
 
-    # lưu / nạp dữ liệu
+    # --------------------------------------------------- lưu / nạp dữ liệu
     def to_dict(self):
         return {
             "hoc_vien": [x.to_dict() for x in self.hoc_vien.values()],
