@@ -232,24 +232,108 @@ class TrungTamService:
         gv = self.lay_giao_vien(lop.ma_gv)
         e = html.escape
         noi_dung = f"""<!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"><title>Chứng nhận {e(dk.ma)}</title>
-<style>
-body{{font-family:Georgia,serif;background:#f4f1ea;margin:0;padding:30px}}
-.khung{{max-width:760px;margin:auto;background:#fff;border:10px double #8a6d3b;padding:50px;text-align:center}}
-h1{{color:#8a6d3b;letter-spacing:3px}} .ten{{font-size:34px;margin:18px 0;color:#222}}
-.phu{{color:#555;margin:6px 0}} .ky{{display:flex;justify-content:space-between;margin-top:60px}}
-</style></head><body><div class="khung">
-<div class="phu">{e(TEN_TRUNG_TAM)}</div>
-<h1>CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC</h1>
-<p class="phu">Chứng nhận học viên</p>
-<div class="ten">{e(hv.ho_ten)}</div>
-<p class="phu">Mã học viên: {e(hv.ma)} &nbsp;|&nbsp; Ngày sinh: {format_date(hv.ngay_sinh)}</p>
-<p>đã hoàn thành khóa <b>{e(khoa.ten)}</b> ({e(khoa.LOAI)}) – lớp <b>{e(lop.ten)}</b></p>
-<p>Điểm tổng kết: <b>{dk.diem_tong_ket:.2f}</b> – Xếp loại: <b>{e(dk.xep_loai)}</b></p>
-<div class="ky"><div>Giáo viên phụ trách<br><br><br><b>{e(gv.ho_ten)}</b></div>
-<div>TP. Hồ Chí Minh, ngày {date.today():%d/%m/%Y}<br>Giám đốc trung tâm<br><br><br></div></div>
-<p class="phu">Số chứng nhận: CN-{e(dk.ma)}</p>
-</div></body></html>"""
+        <html lang="vi">
+                <head>
+                    <meta charset="utf-8">
+                    <title>Chứng nhận {e(dk.ma)}</title>
+        
+                    <style>
+                        body {{
+                            font-family: Georgia, serif;
+                            background: #f4f1ea;
+                            margin: 0;
+                            padding: 30px;
+                        }}
+        
+                        .khung {{
+                            max-width: 760px;
+                            margin: auto;
+                            background: #fff;
+                            border: 10px double #8a6d3b;
+                            padding: 50px;
+                            text-align: center;
+                        }}
+        
+                        h1 {{
+                            color: #8a6d3b;
+                            letter-spacing: 3px;
+                        }}
+        
+                        .ten {{
+                            font-size: 34px;
+                            margin: 18px 0;
+                            color: #222;
+                        }}
+        
+                        .phu {{
+                            color: #555;
+                            margin: 6px 0;
+                        }}
+        
+                        .ky {{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 60px;
+                        }}
+                    </style>
+                </head>
+        
+                <body>
+                    <div class="khung">
+        
+                        <div class="phu">{e(TEN_TRUNG_TAM)}</div>
+        
+                        <h1>CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC</h1>
+        
+                        <p class="phu">Chứng nhận học viên</p>
+        
+                        <div class="ten">{e(hv.ho_ten)}</div>
+        
+                        <p class="phu">
+                            Mã học viên: {e(hv.ma)}
+                            &nbsp;|&nbsp;
+                            Ngày sinh: {format_date(hv.ngay_sinh)}
+                        </p>
+        
+                        <p>
+                            đã hoàn thành khóa
+                            <b>{e(khoa.ten)}</b>
+                            ({e(khoa.LOAI)})
+                            – lớp <b>{e(lop.ten)}</b>
+                        </p>
+        
+                        <p>
+                            Điểm tổng kết:
+                            <b>{dk.diem_tong_ket:.2f}</b>
+                            – Xếp loại:
+                            <b>{e(dk.xep_loai)}</b>
+                        </p>
+        
+                        <div class="ky">
+        
+                            <div>
+                                Giáo viên phụ trách
+                                <br><br><br>
+                                <b>{e(gv.ho_ten)}</b>
+                            </div>
+        
+                            <div>
+                                TP. Hồ Chí Minh, ngày {date.today():%d/%m/%Y}
+                                <br>
+                                Giám đốc trung tâm
+                                <br><br><br>
+                            </div>
+        
+                        </div>
+        
+                        <p class="phu">
+                            Số chứng nhận: CN-{e(dk.ma)}
+                        </p>
+        
+                    </div>
+                </body>
+                </html>
+                """
         try:
             os.makedirs(thu_muc, exist_ok=True)
             duong_dan = os.path.join(thu_muc, f"ChungNhan_{dk.ma}.html")
